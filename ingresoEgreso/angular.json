@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ingresoEgreso": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ingresoEgreso"
+    }
+  },
+  "defaultProject": "ingresoEgreso",
+  "cli": {
+    "analytics": "3eeba62f-9788-4af7-a45d-9b30a1e3bb12"
+  }
 }
