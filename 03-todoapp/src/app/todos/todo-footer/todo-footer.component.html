@@ -1,0 +1,14 @@
+<!-- This footer should hidden by default and shown when there are todos -->
+<footer class="footer">
+  <span class="todo-count"
+    ><strong>{{ pendientes }}</strong> Tareas pendientes</span
+  >
+  <ul class="filters">
+    <li *ngFor="let filtro of filtros" (click)="cambiarFiltro(filtro)">
+      <a [class.selected]="filtro === filtroActual">{{ filtro | titlecase }}</a>
+    </li>
+  </ul>
+  <button class="clear-completed" (click)="limpiarCompletado()">
+    Limpiar completados
+  </button>
+</footer>
