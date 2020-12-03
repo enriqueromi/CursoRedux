@@ -7,6 +7,7 @@ import { BrowserModule } from "@angular/platform-browser";
 //Ngrx
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { ChartsModule } from "ng2-charts";
 import { environment } from "../environments/environment";
 // Modulos
 import { AppRoutingModule } from "./app-routing.module";
@@ -18,6 +19,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { DetalleComponent } from "./ingreso-egreso/detalle/detalle.component";
 import { EstadisticaComponent } from "./ingreso-egreso/estadistica/estadistica.component";
 import { IngresoEgresoComponent } from "./ingreso-egreso/ingreso-egreso.component";
+import { OrdenIngresoPipe } from "./pipes/orden-ingreso.pipe";
 import { FooterComponent } from "./shared/footer/footer.component";
 import { NavbarComponent } from "./shared/navbar/navbar.component";
 import { SidebarComponent } from "./shared/sidebar/sidebar.component";
@@ -34,10 +36,12 @@ import { SidebarComponent } from "./shared/sidebar/sidebar.component";
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
+    OrdenIngresoPipe,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    ChartsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
